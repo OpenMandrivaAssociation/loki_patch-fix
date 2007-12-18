@@ -31,12 +31,15 @@ without any problem.
 rm -rf $RPM_BUILD_ROOT
 install -m755 ./Loki_patch-fix/loki_patch-fix -D $RPM_BUILD_ROOT%{_bindir}/loki_patch-fix
 install -m755 ./Loki_patch-fix/loki_patch-fix-GUI $RPM_BUILD_ROOT%{_bindir}/loki_patch-fix-GUI
-mkdir -p $RPM_BUILD_ROOT%{_menudir}/
-cat << EOF > $RPM_BUILD_ROOT%{_menudir}/%{name}
-?package(%{name}):command="%{_bindir}/loki_patch-fix-GUI" \
-icon="loki_update.png" needs="X11" section="More Applications/Games/Other" \
-title="Oki" \
-longtitle="Oki"
+mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications//
+cat << EOF > %buildroot%{_datadir}/applications/mandriva-%{name}.desktop
+[Desktop Entry]
+Type=Application
+Exec=%{_bindir}/loki_patch-fix-GUI
+Icon=loki_update
+Categories=Game;
+Name=Oki
+Comment=Oki
 EOF
 
 %post
@@ -52,5 +55,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 %doc TODO README version
 %{_bindir}/*
-%{_menudir}/*
+%{_datadir}/applications/mandriva-*.desktop
 
