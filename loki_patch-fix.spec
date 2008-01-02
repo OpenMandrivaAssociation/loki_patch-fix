@@ -10,6 +10,7 @@ Release:	%{release}
 Source0:	%{name}-%{version}.tar.bz2
 URL:		http://goldenfiles.sourceforge.net/index.php?page=lokipatchfix
 Group:		Games/Other
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 License:	GPL
 Requires:	loki_update zenity
 BuildArch:	noarch
