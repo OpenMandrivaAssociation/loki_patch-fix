@@ -1,6 +1,6 @@
 %define	name	loki_patch-fix
 %define	version 0.1
-%define rel	3
+%define rel	4
 %define	release	%mkrel %rel
 
 Name:		%{name} 
