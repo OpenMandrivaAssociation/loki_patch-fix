@@ -62,3 +62,33 @@ rm -rf $RPM_BUILD_ROOT
 %{_bindir}/*
 %{_datadir}/applications/mandriva-*.desktop
 
+
+
+%changelog
+* Fri Dec 10 2010 Oden Eriksson <oeriksson@mandriva.com> 0.1-4mdv2011.0
++ Revision: 620254
+- the mass rebuild of 2010.0 packages
+
+* Fri Sep 04 2009 Thierry Vignaud <tv@mandriva.org> 0.1-3mdv2010.0
++ Revision: 429865
+- rebuild
+
+* Thu Jun 12 2008 Pixel <pixel@mandriva.com> 0.1-2mdv2009.0
++ Revision: 218422
+- rpm filetriggers deprecates update_menus/update_scrollkeeper/update_mime_database/update_icon_cache/update_desktop_database/post_install_gconf_schemas
+
+  + Olivier Blin <oblin@mandriva.com>
+    - restore BuildRoot
+
+* Wed Dec 19 2007 Thierry Vignaud <tv@mandriva.org> 0.1-2mdv2008.1
++ Revision: 133064
+- auto-convert XDG menu entry
+- kill re-definition of %%buildroot on Pixel's request
+- import loki_patch-fix
+
+
+* Fri May 12 2006 Eskild Hustvedt <eskild@mandriva.org> 0.1-1mdk
+- Yearly rebuild
+
+* Mon Apr 25 2005  Eskild Hustvedt <eskild@mandriva.org> 0.1-1mdk
+- Initial Mandriva Linux package
