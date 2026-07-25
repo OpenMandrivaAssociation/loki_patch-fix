@@ -1,7 +1,7 @@
 %define	name	loki_patch-fix
 %define	version 0.1
 %define rel	4
-%define	release	%mkrel %rel
+%define	release %rel.1
 
 Name:		%{name} 
 Summary:	A program that fixes broken loki patches
